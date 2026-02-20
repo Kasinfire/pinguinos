@@ -2,7 +2,7 @@
 
 
 ## Sobre el Proyecto
-Esta página web fue construida utilizando **100% HTML puro**. Cero CSS, cero JavaScript. Aquí usamos pura etiqueta loollllllll
+Esta página web fue construida utilizando **100% HTML puro**. Cero CSS, cero JavaScript. Aquí usé pura etiqueta loollllllll
 
 ## Especies en la Enciclopedia
 * **Pingüino Emperador:** El gigante del hielo.
