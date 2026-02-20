@@ -1,9 +1,8 @@
 # Pingüinos del Mundo (Edición Retro)
 
-¡Bienvenido a la enciclopedia definitiva de pingüinos! Este proyecto es una máquina del tiempo directa a los inicios del internet. 
 
 ## Sobre el Proyecto
-Esta página web fue construida utilizando **100% HTML puro**. Cero CSS, cero JavaScript, cero trucos modernos. Aquí usamos pura etiqueta ruda y de la vieja escuela como `<center>`, `<font color="gray">` y `<fieldset>`. Si tu navegador es moderno, lo lee de milagro.
+Esta página web fue construida utilizando **100% HTML puro**. Cero CSS, cero JavaScript. Aquí usamos pura etiqueta loollllllll
 
 ## Especies en la Enciclopedia
 * **Pingüino Emperador:** El gigante del hielo.
