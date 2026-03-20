@@ -1,0 +1,826 @@
+:root {
+    --azul:  #031CA6;
+    --azul-oscuro: #142559;
+    --azul-claro: #4361EE;
+    --rojo: #F94B41;
+    --amarillo: #f2CB05;
+    --blanco: #F2F2F2;
+    --negro: #262626;
+
+    --fuente-titulo: 'Montserrat', sans-serif;
+    --fuente-texto:  'Lato', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: var(--fuente-texto);
+    background-color: var(--blanco);
+    color: var(--negro);
+}
+
+/*HERO-------------------------------------------*/
+
+#hero {
+    background-color: var(--azul);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-imagen {
+    position: relative;
+    width: 600px;
+    height: 600px;
+}
+
+.hero-imagen::before {
+    content: "";
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    background-color: var(--blanco);
+    border-radius: 50%;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+.hero-imagen img {
+    position: absolute;
+    width: 90%;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-49%);
+    z-index: 1;
+}
+
+#hero h1, #hero p {
+    position: relative;
+    z-index: 2;
+    color: var(--amarillo);
+    font-family: var(--fuente-titulo);
+    text-align: center;
+}
+
+#hero h1 {
+    font-size: 90px;
+    font-weight: 900;
+    font-style: italic;
+    text-shadow: 4px 5px 0px var(--negro);
+}
+
+#hero p {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--blanco);
+    text-shadow: 2px 2px 0px var(--negro);
+    margin-top: -10px;
+}
+
+/*HEADER----------------------------------------*/
+
+header {
+    background-color: var(--azul-oscuro);
+    padding: 20px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.logo {
+    color: var(--amarillo);
+    font-family: var(--fuente-titulo);
+    font-size: 26px;
+    font-weight: 900;
+    font-style: italic;
+    text-decoration: none;
+    text-shadow: 2px 2px 0px var(--negro);
+    transition: transform 0.2s ease;
+}
+
+.logo:hover {
+    transform: scale(1.05); 
+}
+
+header nav {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+header nav a {
+    color: var(--blanco);
+    text-decoration: none;
+    font-family: var(--fuente-titulo);
+    font-weight: 700;
+    font-size: 16px; 
+    text-transform: uppercase; 
+    letter-spacing: 1px;
+    position: relative; 
+    padding: 5px 0;
+    transition: color 0.3s ease;
+}
+
+header nav a:hover {
+    color: var(--amarillo);
+}
+
+header nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--amarillo);
+    transition: width 0.3s ease;
+}
+
+header nav a:hover::after {
+    width: 100%;
+}
+
+/*IMPACTOOOO----------------------*/
+#impacto {
+    display: flex;
+    height: 100vh;
+    background-color: var(--negro);
+    overflow: hidden;
+}
+
+.impacto-imagen {
+    width: 50%;
+    background-color: var(--blanco);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0 400px 400px 0;
+}
+
+.impacto-imagen img {
+    width: 80%;
+    transform: translateX(-10%);
+    object-fit: contain;
+}
+
+.impacto-texto {
+    width: 50%;
+    background-color: var(--negro);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 5% 8%
+}
+
+.impacto-dato {
+    font-family: var(--fuente-titulo);
+    font-size: 100px;
+    font-weight: 900;
+    line-height: 1;
+    margin-bottom: 10px;
+    color: var(--amarillo);
+}
+
+.impacto-subtitulo {
+    font-family: var(--fuente-titulo);
+    font-size: 36px;
+    color: var(--blanco);
+    margin-bottom: 5px;
+}
+
+.impacto-frase {
+    font-family: var(--fuente-titulo);
+    font-size: 30px;
+    color: var(--rojo);
+    font-weight: 600;
+}
+
+
+/*PROBLEMATICA----------------------------------*/
+
+#problematicas {
+    background: linear-gradient(to bottom, var(--negro) 50%, var(--blanco) 50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 60px;
+}
+
+.problematicas-cards {
+    display: flex;
+    justify-content: center;
+    gap: 40px;  
+    width: 100%;
+    max-width: 1200px; 
+    padding: 0 20px;
+    z-index: 2; /
+}
+
+.problema-card {
+    background-color: var(--rojo);
+    border-radius: 16px;
+    padding: 40px 30px;
+    width: 320px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); 
+    transition: transform 0.3s ease;
+}
+
+.problema-card:hover {
+    transform: translateY(-10px); 
+}
+
+.problema-icono {
+    font-size: 100px;
+    height: 100px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+.problema-card h3 {
+    display: flex;
+    font-family: var(--fuente-titulo);
+    color: var(--negro);
+    text-transform: uppercase;
+    font-size: 22px;
+    font-weight: 900;
+}
+
+.problema-card p {
+    color: var(--blanco);
+    font-size: 16px;
+    line-height: 1.6;
+    text-align: justify;
+    padding: 5%;
+    width: 100%;
+}
+
+.problematicas-frase {
+    width: 100%;
+    background-color: transparent; 
+    padding: 60px 20px 40px 20px;
+    text-align: center;
+}
+
+.problematicas-frase p {
+    font-family: var(--fuente-titulo);
+    font-size: 28px;
+    font-weight: 900;
+    color: var(--azul-oscuro); 
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+
+/*AAAAAAAAAAAAAAAAAA*/
+
+main {
+    background-color: var(--blanco);
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.card {
+    width: calc(33.333% - 14px);
+    height: 400px;
+    border-radius: 20px;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 20px;
+    transform: 0.3s ease;
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    flex:1;
+}
+
+.card h2 {
+    font-family: var(--fuente-titulo);
+    font-size: 20px;
+    font-weight: 900;
+    margin-top: 10px;
+    text-transform: uppercase;
+    color: var(--blanco);
+    text-align: center;
+    margin-top: 12px;
+    font-style:italic;
+
+
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 5px 40px rgba(0, 0, 0, 0.3);
+}
+
+#card-emperador { background-color: var(--azul); }
+#card-adelia    { background-color: var(--azul-claro); }
+#card-galapagos { background-color: var(--amarillo); }
+#card-azul      { background-color: var(--rojo); }
+#card-rey       { background-color: var(--negro); }
+#card-barbijo   { background-color: var(--azul-oscuro); }
+
+
+/*Footer-----------------------------------------------------*/
+
+footer {
+    padding: 40px 60px;
+    background-color: var(--azul);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer p{
+    color: var(--blanco);
+    font-family: var(--fuente-titulo);
+    font-weight: 400;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/*PPPPPPPPPPPPP---------------------------------------------*/
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-menu {
+    display: none; 
+    position: absolute;
+    background-color: var(--azul-oscuro);
+    min-width: 150px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.3);
+    z-index: 200; 
+    border-radius: 10px;
+    top: 100%; 
+    left: 50%;
+    transform: translateX(-50%);
+    overflow: hidden;
+    padding:  8px 0;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu a {
+    color: var(--blanco);
+    padding: 15px 20px;
+    text-decoration: none;
+    display: block;
+    font-size: 14px;
+    text-transform: capitalize; 
+    transition: background-color 0.2s;
+}
+
+.dropdown-menu a:hover {
+    background-color: var(--azul);
+    color: var(--amarillo);
+    width: 100%;
+}
+
+.dropdown-menu a::after {
+    display: none;
+}
+
+/*PINGU2--------------------------------------------*/
+
+.pinguino-hero {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    background: var(--blanco);
+    padding: 60px 10%;
+    gap: 80px; 
+    min-height: calc(100vh - 80px);
+}
+
+.pinguino-foto {
+    position: relative;
+    z-index: 1;
+    flex: 1;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    min-height: 650px; 
+}
+
+.pinguino-foto::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 550px;
+    height: 700px;
+    background-color: var(--azul);
+    border-radius: 60% 40% 70% 30% / 50% 60% 40% 70%;
+    z-index: 0;
+}
+
+.pinguino-foto img {
+    position: relative; 
+    z-index: 1;
+    width: 100%;
+    max-width: 300px;
+    object-fit: contain;
+}
+
+.pinguino-info {
+    flex: 1;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 25vh; 
+}
+
+.pinguino-info h1 {
+    font-family: var(--fuente-titulo);
+    font-size: 85px; 
+    font-weight: 900;
+    line-height: 1.1; 
+    margin-bottom: 10px;
+    color: var(--rojo);
+    text-transform: uppercase;
+    letter-spacing: -2px; 
+}
+
+.pinguino-info h2 {
+    font-family: var(--fuente-titulo); 
+    font-size: 32px;
+    font-weight: 700;
+    font-style: italic;
+    line-height: 1.2;
+    margin-bottom: 25px;
+    color: var(--amarillo);
+}
+
+.pinguino-info p {
+    font-family: var(--fuente-texto);
+    font-size: 20px;
+    line-height: 1.6; 
+    color: var(--negro);
+    text-align: justify;
+}
+
+.pagina-galapagos .pinguino-info h1 { color: var(--azul-claro); }
+.pagina-adelia .pinguino-info h1    { color: var(--rojo); }
+.pagina-azul .pinguino-info h1      { color: var(--azul); }
+.pagina-rey .pinguino-info h1       { color: var(--azul-oscuro); }
+.pagina-barbijo .pinguino-info h1   { color: var(--azul-oscuro); }
+
+#pinguino-adelia .pinguino-foto img,
+#pinguino-galapagos .pinguino-foto img,
+#pinguino-azul .pinguino-foto img,
+#pinguino-rey .pinguino-foto img,
+#pinguino-barbijo .pinguino-foto img {
+    max-width: 550px;
+}
+
+#pinguino-galapagos .pinguino-foto::before {
+    width: 500px;
+    height: 600px;
+    background-color: var(--amarillo);
+}
+
+#pinguino-azul .pinguino-foto::before {
+    width: 600px;
+    height: 500px;
+    background-color: var(--rojo);
+}
+
+#pinguino-adelia .pinguino-foto::before {
+    width: 600px;
+    height: 600px;
+    background-color: var(--azul-claro);
+}
+
+#pinguino-rey .pinguino-foto::before {
+    width: 600px;
+    height: 550px;
+    background-color: var(--negro);
+}
+
+#pinguino-barbijo .pinguino-foto::before {
+    width: 600px;
+    height: 650px;
+    left: 45%;
+    background-color: var(--azul-oscuro); 
+}
+
+
+/*GAAAAAAL---*/
+
+.galeria {
+    display: flex;
+    gap: 0;
+    height: 400px;
+}
+
+.galeria img {
+    width: 33.333%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(20%);
+    transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.galeria img:hover {
+    filter: grayscale(0%);
+    transform: scale(1.02);
+}
+
+/*Datos*/
+
+.datos-rapidos {
+    background-color: var(--rojo);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    padding: 80px 60px;
+    flex-wrap: wrap;
+}
+
+.dato-ovalo {
+    background-color: var(--blanco);
+    border-radius: 50%;
+    width: 250px;
+    height: 350px;
+    box-shadow: 8px 8px 0px var(--negro);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 3%;
+    gap: 8px;
+}
+
+.dato-ovalo:hover {
+    transform: scale(1.02);
+}
+
+.dato-ovalo h3 {
+    font-family: var(--fuente-titulo);
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--azul-claro);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-style: italic;
+    
+}
+
+.dato-ovalo p {
+    font-family: var(--fuente-titulo);
+    font-size: 20px;
+    font-weight: 900;
+    color: var(--negro);
+}
+
+/* CURIOSIDADES -----------------------------------*/
+.curiosidades {
+    height: 100vh;
+    background-color: var(--negro);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 80px 10%;
+    position: relative;
+    overflow: hidden;
+}
+
+.burbuja {
+    background-color: var(--amarillo);
+    border-radius: 80px;
+    padding: 50px;
+    min-height: 400px;
+    height: 600px;
+    max-width: 650px;
+    position: relative;
+    z-index: 2;
+    padding: 60px 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 15px 15px 0px var(--azul-oscuro);
+    
+}
+
+.burbuja::after {
+    content: "";
+    position: absolute;
+    right: -48px;
+    top: 30%;
+    transform: translateY(-50%);
+    border: 30px solid transparent;
+    border-left-color: var(--amarillo);
+}
+
+.burbuja h3 {
+    font-family: var(--fuente-titulo);
+    font-size: 50px;
+    font-style: italic;
+    font-weight: 900;
+    color: var(--azul);
+    margin-bottom: 30px;
+    line-height: 1.1;
+    text-transform: uppercase;
+}
+
+.burbuja ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding-left: 30px;
+}
+
+.burbuja ul li {
+    font-family: var(--fuente-texto);
+    font-size: 20px;
+    color: var(--negro);
+    padding-left: 20px;
+    border-left: 4px solid var(--rojo);
+    line-height: 1.5;
+    font-weight: 900;
+}
+
+.curiosidades-pinguino {
+    position: absolute;
+    right: 50px;
+    bottom: 10px;
+}
+
+.curiosidades-pinguino img {
+    width: 550px;
+    object-fit: contain;
+}
+
+
+/*_______________________*/
+
+
+@media (max-width: 992px) {
+    
+    .pinguino-hero {
+        flex-direction: column;
+        margin-top: 0;
+        gap: 40px;
+        text-align: center;
+        padding-top: 40px;
+    }
+
+    
+    .pinguino-info {
+        margin-top: 0;
+        align-items: center;
+    }
+    
+    .pinguino-info p {
+        text-align: center;
+    }
+
+    #impacto {
+        flex-direction: column;
+        height: auto;
+    }
+    
+    .impacto-imagen, .impacto-texto {
+        width: 100%;
+        padding: 40px;
+    }
+
+    .impacto-imagen {
+        border-radius: 0 0 100px 100px; 
+
+    .problematicas-cards {
+        flex-wrap: wrap;
+    }
+    
+    .card {
+        width: calc(50% - 10px); 
+    }
+
+    .curiosidades {
+        height: auto;
+        padding-bottom: 350px; 
+        justify-content: center;
+    }
+    
+    .burbuja {
+        max-width: 100%;
+    }
+}
+
+/* 2. PARA CELULARES (hasta 768px) */
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px 20px;
+    }
+
+    #hero h1 { font-size: 55px; }
+    .hero-imagen { width: 300px; height: 300px; }
+    .hero-imagen::before { width: 300px; height: 300px; }
+    
+ 
+    .impacto-dato { font-size: 60px; }
+    .impacto-subtitulo { font-size: 28px; }
+
+
+    .card { width: 100%; }
+
+    .pinguino-info h1 { font-size: 50px; line-height: 1; }
+    
+    .pinguino-foto::before,
+    #pinguino-galapagos .pinguino-foto::before,
+    #pinguino-azul .pinguino-foto::before,
+    #pinguino-adelia .pinguino-foto::before,
+    #pinguino-rey .pinguino-foto::before,
+    #pinguino-barbijo .pinguino-foto::before {
+        width: 320px;
+        height: 400px;
+    }
+
+    .galeria {
+        flex-direction: column;
+        height: auto;
+    }
+    
+    .galeria img {
+        width: 100%;
+        height: 300px;
+    }
+
+    .dato-ovalo {
+        width: 200px;
+        height: 280px;
+    }
+
+    .burbuja {
+        padding: 30px;
+        height: auto;
+        min-height: auto;
+        border-radius: 30px;
+        box-shadow: 8px 8px 0px var(--azul-oscuro);
+    }
+    
+    .burbuja::after { display: none; }
+    
+    .burbuja h3 { font-size: 35px; }
+
+    .curiosidades-pinguino img { width: 300px; }
+    .curiosidades { padding-bottom: 200px; }
+    }
+
+    .curiosidades { 
+        padding-bottom: 280px; 
+        padding-top: 50px;
+    }
+
+    .curiosidades-pinguino {
+        right: 50%;
+        transform: translateX(50%);
+        bottom: -10px;
+    }
+
+    .curiosidades-pinguino img { 
+        width: 220px; 
+    }
+}

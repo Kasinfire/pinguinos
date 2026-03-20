@@ -4,205 +4,108 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pingüinos</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Lato:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <center>
-        <h1 id="inicio">Pingüinos del Mundo</h1>
-    </center>
-    <hr>
-    
-    <center>
+    <section id="hero">  
+        <div class="hero-imagen">
+            <img src="img/pinguino1.png" alt="Pingüino">
+        </div>
+        <h1>PINGUINITOS</h1>
+        <p>Descubre las especies más fascinantes del planeta</p>
+    </section>
+
+    <header>
+        <a href="index.html" class="logo">PINGUINITOS</a>
         <nav>
-            <a href="#emperador">Emperador</a> | 
-            <a href="#adelia">Adelia</a> | 
-            <a href="#galapagos">Galápagos</a> |
-            <a href="#azul">Azul</a> |
-            <a href="#rey">Rey</a> |
-            <a href="#barbijo">Barbijo</a>
+            <a href="#">Inicio</a>
+            <a href="#sobre-pinguinos">Sobre los pingüinos</a>
         </nav>
-    </center>
-    <hr>
-
-
-
-    <main>
+    </header>
         
-        <article id="emperador">
-            <fieldset>
-                <legend><h2>Pingüino Emperador</h2></legend>
-                <h3><em><font color="gray">(Aptenodytes forsteri)</font></em></h3>
-                
-                <center>
-                    <figure>
-                        <img src="https://p.turbosquid.com/ts-thumb/5M/XL8NkV/eW/jf0la12a7_emperorpenguin_display_protect_02/jpg/1685772801/1920x1080/fit_q99/7304b229ae56667666dd775c1d0919ec0c4ac1b9/jf0la12a7_emperorpenguin_display_protect_02.jpg" width="600" alt="Pingüino Emperador">
-                    </figure>
-                </center>
-                
-                <p>
-                    Es la especie más grande y pesada de pingüino, endémica de la Antártida, alcanzando hasta 1.20 metros y 40 kg.
-                </p>
-               
-                <details>
-                    <summary><b>Datos interesantes</b></summary>
-                    <ul>
-                        <li>El macho no come absolutamente nada durante unos 115 días mientras protege el huevo en el invierno antártico.</li>
-                        <li>Cuando los bebés crecen un poco, se agrupan en "guarderías" llamadas crèches.</li>
-                        <li>Pueden nadar a velocidades de hasta 15 km/h.</li>
-                    </ul>
-                </details>
-            </fieldset>
-        </article>
-        <br>
+    <section id="impacto">
+        <div class="impacto-imagen">
+            <img src="img/pinguino-hielo.png" alt="Pingüino en el hielo">
+        </div>
+        <div class="impacto-texto">
+            <p class="impacto-dato">60 millones</p>
+            <p class="impacto-subtitulo">de años llevan en la Tierra.</p>
+            <p class="impacto-frase">Hoy, su hogar está en peligro y necesitan de tu atención.</p>
+        </div>
+    </section>
 
+    <section id="problematicas">
+        <div class="problematicas-cards">
+            
+            <div class="problema-card">
+                <img src="img/deshielo.png" alt="Deshielo" class="problema-icono">
+                <h3>Deshielo acelerado</h3>
+                <p>La Antártida pierde su hielo a un ritmo alarmante, destruyendo el lugar donde nacen y crían a sus polluelos.</p>
+            </div>
+            
+            <div class="problema-card">
+                <img src="img/pez.png" alt="Escasez de alimento" class="problema-icono">
+                <h3>Escasez de alimento</h3>
+                <p>La pesca industrial está vaciando los océanos, dejándolos sin el krill y los peces que necesitan para sobrevivir.</p>
+            </div>
+            
+            <div class="problema-card">
+                <img src="img/contaminacion.png" alt="Contaminación" class="problema-icono">
+                <h3>Contaminación</h3>
+                <p>Los derrames de petróleo y toneladas de plástico están invadiendo sus aguas, convirtiendo su hogar en una trampa mortal.</p>
+            </div>
+            
+        </div>
+        
+        <div class="problematicas-frase">
+            <p>¡Conoce a los que aún luchan por vivir!</p>
+        </div>
+    </section>
 
+    <main id="sobre-pinguinos">
+            <a href="emperador.html" class="card" id="card-emperador">
+                <img src="img/emperador.png" alt="Pingüino Emperador">
+                <h2>Emperador</h2>
+            </a>
 
+            <a href="rey.html" class="card" id="card-rey">
+                <img src="img/rey.png" alt="Pingüino Rey">
+                <h2>Rey</h2>
+            </a>
+            
+           <a href="galapagos.html" class="card" id="card-galapagos">
+                <img src="img/galapagos.png" alt="Pingüino Galápagos">
+                <h2>Galápagos</h2>
+            </a>
 
-        <article id="adelia">
-            <fieldset>
-                <legend><h2>Pingüino de Adelia</h2></legend>
-                <h3><em><font color="gray">(Pygoscelis adeliae)</font></em></h3>
+           <a href="azul.html" class="card" id="card-azul">
+                <img src="img/azul.png" alt="Pingüino Azul">
+                <h2>Azul</h2>
+            </a>
 
-                <center>
-                    <figure>
-                        <img src="https://www.rutaschile.com/configurador/Parques/Fauna_01122015141101.jpg" width="600" alt="Pingüino de Adelia">
-                    </figure>
-                </center>
-                
-                <p>
-                    Son una de las especies más icónicas de la Antártida, conocidos por ser pequeños, valientes y muy sociables. Físicamente, se distinguen por el característico anillo blanco que rodea sus ojos y por no tener las plumas de la cara de color blanco, lo que les da una apariencia muy seria.
-                </p>
+            <a href="barbijo.html" class="card" id="card-barbijo">
+                <img src="img/barbijo.png" alt="Pingüino Barbijo">
+                <h2>Barbijo</h2>
+            </a>
 
-                <details>
-                    <summary><b>Datos interesantes</b></summary>
-                    <ul>
-                        <li>Son famosos por construir sus nidos exclusivamente con pequeñas piedras que recolectan. A veces, ¡se las roban entre ellos si no están cuidando el nido!</li>
-                        <li>Aunque son pequeños (miden unos 70 cm), son conocidos por ser los pingüinos más "rebeldes" y territoriales de la Antártida, enfrentándose incluso a depredadores más grandes.</li>
-                    </ul>
-                </details>
-            </fieldset>
-        </article>
+            <a href="adelia.html" class="card" id="card-adelia">
+                <img src="img/adelia.png" alt="Pingüino Adelia">
+                <h2>Adelia</h2>
+            </a>
 
-
-        <article id="galapagos">
-            <fieldset>
-                <legend><h2>Pingüino de Galápagos</h2></legend>
-                <h3><em><font color="gray">(Spheniscus mendiculus)</font></em></h3>
-
-                <center>
-                    <figure>
-                        <img src="https://datazone.darwinfoundation.org/images/checklist/5189_penguin_group_hms_ppt.jpg" width="600" alt="Pingüino de Galápagos">
-                    </figure>
-                </center>
-
-                <p>
-                    Es uno de los pingüinos más pequeños del mundo (aprox. 48 cm). Ha logrado adaptarse al calor de las Islas Galápagos gracias a las corrientes frías del océano.
-                </p>
-
-                <details>
-                    <summary><b>Datos interesantes</b></summary>
-                    <ul>
-                        <li>Para refrescarse, jadean como los perros y estiran sus aletas para liberar calor.</li>
-                        <li>Sus poblaciones son pequeñas y son muy vulnerables a los cambios climáticos.</li>
-                    </ul>
-                </details>
-            </fieldset>
-        </article>
-
-
-        <article id="azul">
-            <fieldset>
-                <legend><h2>Pingüino Azul</h2></legend>
-                <h3><em><font color="gray">(Eudyptula minor)</font></em></h3>
-
-                <center>
-                    <figure>
-                        <img src="https://www.globalpenguinsociety.org/images/species/little/lit-03.jpg" width="600" alt="Pingüino Azul">
-                    </figure>
-                </center>
-
-                <p>
-                    Es la especie de pingüino más pequeña de todo el mundo, midiendo alrededor de 30 a 33 cm de altura y pesando apenas 1.5 kg. Se caracterizan por el hermoso tono azul índigo o gris azulado de las plumas de su espalda.
-                </p>
-
-                <details>
-                    <summary><b>Datos interesantes</b></summary>
-                    <ul>
-                        <li>Viven principalmente en las costas de Nueva Zelanda y el sur de Australia.</li>
-                        <li>En Australia los conocen cariñosamente como "pingüinos hada" (Fairy penguins) debido a su diminuto tamaño.</li>
-                        <li>Tienen costumbres nocturnas en tierra: salen a pescar antes de que salga el sol y regresan a sus nidos ya que oscureció para esconderse de las gaviotas y otros depredadores.</li>
-                    </ul>
-                </details>
-            </fieldset>
-        </article>
-
-
-        <article id="rey">
-            <fieldset>
-                <legend><h2>Pingüino Rey</h2></legend>
-                <h3><em><font color="gray">(Aptenodytes patagonicus)</font></em></h3>
-
-                <center>
-                    <figure>
-                        <img src="https://cdn0.ecologiaverde.com/es/posts/9/5/9/donde_vive_el_pinguino_rey_5959_1_600.webp" width="600" alt="Pingüino Rey">
-                    </figure>
-                </center>
-
-                <p>
-                    Es el segundo pingüino más grande del mundo, solo por detrás del Emperador. A simple vista se parecen mucho, pero el Pingüino Rey tiene colores mucho más vivos, con manchas naranjas casi fluorescentes a los lados del cuello y en el pico.
-                </p>
-
-                <details>
-                    <summary><b>Datos interesantes</b></summary>
-                    <ul>
-                        <li>No hacen nidos. Al igual que los emperadores, incuban su único huevo llevándolo sobre sus patas y cubriéndolo con un pliegue de piel caliente.</li>
-                        <li>Sus crías nacen con un abrigo de plumas color café tan esponjoso y diferente a los adultos, que los primeros exploradores pensaban que eran otra especie (les decían "pingüinos lanudos").</li>
-                        <li>Pueden sumergirse a más de 300 metros de profundidad para cazar peces linterna.</li>
-                    </ul>
-                </details>
-            </fieldset>
-        </article>
-
-        <article id="barbijo">
-            <fieldset>
-                <legend><h2>Pingüino de Barbijo</h2></legend>
-                <h3><em><font color="gray">(Pygoscelis antarcticus)</font></em></h3>
-
-                <center>
-                    <figure>
-                        <img src="https://www.globalpenguinsociety.org/images/species/chinstrap/chin-005.webp" width="600" alt="Pingüino de Barbijo">
-                    </figure>
-                </center>
-
-                <p>
-                    Se distinguen fácilmente de cualquier otro pingüino gracias a una delgada línea de plumas negras que cruza por debajo de su barbilla, haciéndolos lucir como si llevaran puesto un casco negro de bicicleta abrochado.
-                </p>
-
-                <details>
-                    <summary><b>Datos interesantes</b></summary>
-                    <ul>
-                        <li>Son de los pingüinos más abundantes de la Antártida, con colonias que pueden llegar a tener cientos de miles de individuos.</li>
-                        <li>Tienen la reputación de ser los pingüinos más ruidosos, agresivos y valientes. ¡No dudan en pelear con otras aves para defender sus nidos de piedras!</li>
-                        <li>Su dieta se basa casi por completo en krill antártico.</li>
-                    </ul>
-                </details>
-            </fieldset>
-        </article>
-
-
-        <footer>            
-            <hr>
-            <center>
-                <p>Página creada por mi lol</p> 
-                <a href="#inicio">Volver arriba</a>
-            </center>
-        </footer>
-
-
+        
         
     </main>
+
+    <footer>
+        <p>Página creada por Kelly · 2026 </p> 
+    </footer>   
+
 </body>
-</html>
+</html> 
 
 
 
