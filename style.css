@@ -22,6 +22,7 @@ body {
     font-family: var(--fuente-texto);
     background-color: var(--blanco);
     color: var(--negro);
+    overflow-x: hidden;
 }
 
 /*HERO-------------------------------------------*/
@@ -227,7 +228,7 @@ header nav a:hover::after {
     width: 100%;
     max-width: 1200px; 
     padding: 0 20px;
-    z-index: 2; /
+    z-index: 2; 
 }
 
 .problema-card {
@@ -762,7 +763,6 @@ footer p{
  
     .impacto-dato { font-size: 60px; }
     .impacto-subtitulo { font-size: 28px; }
-
 
     .card { width: 100%; }
 
