@@ -825,16 +825,6 @@ footer p{
         align-items: center;
     }
 
-    /* Foto: tamaño fijo cómodo, centrada */
-    pinguino-foto {
-        width: min(280px, 75vw);
-        height: min(320px, 85vw);
-        min-height: unset !important;
-        flex: none;
-        margin: 0 auto;
-        background-color: transparent !important; /* FUERZA la transparencia del cuadrado */
-    }
-
     /* Blob: llena el contenedor con forma orgánica */
     .pinguino-foto::before,
     #pinguino-galapagos .pinguino-foto::before,
@@ -851,18 +841,26 @@ footer p{
         
     }
 
-    /* Imagen del pingüino: llena bien el blob */
-    /* Imagen del pingüino: llena bien el blob */
+    .pinguino-foto {
+        width: min(320px, 85vw); 
+        height: min(360px, 95vw);
+        min-height: unset !important;
+        flex: none;
+        margin: 0 auto; 
+        background-color: transparent !important;
+    }
+
     .pinguino-foto img,
     #pinguino-adelia .pinguino-foto img,
     #pinguino-galapagos .pinguino-foto img,
     #pinguino-azul .pinguino-foto img,
     #pinguino-rey .pinguino-foto img,
     #pinguino-barbijo .pinguino-foto img {
-        max-width: 85% !important;
-        width: 85%;
-        max-height: 100%; 
-        object-fit: contain; 
+        width: 100%; /* Aumentado de 85% a 100% para que llene el blob */
+        max-width: 100% !important; /* Eliminada la restricción anterior */
+        max-height: 100%;
+        object-fit: contain; /* ¡Clave! Escala proporcionalmente y centra la imagen */
+        background-color: transparent !important;
     }
 
     /* Info debajo de la foto */
