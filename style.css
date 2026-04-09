@@ -391,6 +391,10 @@ footer p{
     padding:  8px 0;
 }
 
+.dropdown > a {
+    cursor: default;
+}
+
 .dropdown:hover .dropdown-menu {
     display: block;
 }
@@ -434,7 +438,7 @@ footer p{
     display: flex;
     justify-content: center; 
     align-items: center;
-    min-height: 650px; 
+    min-height: clamp(300px, 60vw, 650px);
 }
 
 .pinguino-foto::before {
@@ -443,8 +447,8 @@ footer p{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 550px;
-    height: 700px;
+    width: min(550px, 85vw);
+    height: min(700px, 110vw);
     background-color: var(--azul);
     border-radius: 60% 40% 70% 30% / 50% 60% 40% 70%;
     z-index: 0;
@@ -511,34 +515,39 @@ footer p{
 }
 
 #pinguino-galapagos .pinguino-foto::before {
-    width: 500px;
-    height: 600px;
+    width: min(500px, 80vw);
+    height: min(600px, 95vw);
     background-color: var(--amarillo);
+    border-radius: 60% 40% 70% 30% / 50% 60% 40% 70%;
 }
 
 #pinguino-azul .pinguino-foto::before {
-    width: 600px;
-    height: 500px;
+    width: min(600px, 85vw);
+    height: min(500px, 80vw);
     background-color: var(--rojo);
+    border-radius: 60% 40% 70% 30% / 50% 60% 40% 70%;
 }
 
 #pinguino-adelia .pinguino-foto::before {
-    width: 600px;
-    height: 600px;
+    width: min(600px, 85vw);
+    height: min(600px, 95vw);
     background-color: var(--azul-claro);
+    border-radius: 60% 40% 70% 30% / 50% 60% 40% 70%;
 }
 
 #pinguino-rey .pinguino-foto::before {
-    width: 600px;
-    height: 550px;
+    width: min(600px, 85vw);
+    height: min(550px, 88vw);
     background-color: var(--negro);
+    border-radius: 60% 40% 70% 30% / 50% 60% 40% 70%;
 }
 
 #pinguino-barbijo .pinguino-foto::before {
-    width: 600px;
-    height: 650px;
-    left: 45%;
-    background-color: var(--azul-oscuro); 
+    width: min(600px, 85vw);
+    height: min(650px, 100vw);
+    left: 50%;
+    background-color: var(--azul-oscuro);
+    border-radius: 60% 40% 70% 30% / 50% 60% 40% 70%;
 }
 
 
@@ -726,7 +735,8 @@ footer p{
     }
 
     .impacto-imagen {
-        border-radius: 0 0 100px 100px; 
+        border-radius: 0 0 100px 100px;
+    }
 
     .problematicas-cards {
         flex-wrap: wrap;
@@ -756,63 +766,189 @@ footer p{
         padding: 15px 20px;
     }
 
-    #hero h1 { font-size: 55px; }
-    .hero-imagen { width: 300px; height: 300px; }
-    .hero-imagen::before { width: 300px; height: 300px; }
-    
- 
+    /* HERO INDEX: compacto y proporcional al viewport */
+    #hero {
+        height: 100svh;
+        padding: 20px 16px;
+        justify-content: center; 
+        gap: 25px; 
+    }
+
+    #hero h1 {
+        font-size: clamp(36px, 12vw, 55px);
+        margin-top: 0;
+    }
+
+    #hero p {
+        font-size: clamp(13px, 4vw, 18px);
+        margin-top: -5px;
+    }
+
+    .hero-imagen {
+        width: min(260px, 65vw);
+        height: min(260px, 65vw);
+    }
+
+    .hero-imagen::before {
+        width: 100%;
+        height: 100%;
+    }
+
+    /* IMPACTO */
     .impacto-dato { font-size: 60px; }
     .impacto-subtitulo { font-size: 28px; }
 
+    /* CARDS INICIO */
     .card { width: 100%; }
 
-    .pinguino-info h1 { font-size: 50px; line-height: 1; }
-    
+    /* PROBLEMATICAS: una columna centrada */
+    .problematicas-cards {
+        flex-direction: column;
+        align-items: center;
+        padding: 0 16px;
+        gap: 24px;
+    }
+
+    .problema-card {
+        width: 100%;
+        max-width: 380px;
+        height: auto;
+        padding: 30px 20px;
+    }
+
+    /* PÁGINAS DE ESPECIE — contenedor en columna */
+    .pinguino-hero {
+        flex-direction: column;
+        padding: 30px 16px 32px;
+        gap: 0;
+        min-height: unset;
+        align-items: center;
+    }
+
+    /* Foto: tamaño fijo cómodo, centrada */
+    .pinguino-foto {
+        width: min(280px, 75vw);
+        height: min(320px, 85vw);
+        min-height: unset !important;
+        flex: none;
+        margin: 0 auto;
+    }
+
+    /* Blob: llena el contenedor con forma orgánica */
     .pinguino-foto::before,
     #pinguino-galapagos .pinguino-foto::before,
     #pinguino-azul .pinguino-foto::before,
     #pinguino-adelia .pinguino-foto::before,
     #pinguino-rey .pinguino-foto::before,
     #pinguino-barbijo .pinguino-foto::before {
-        width: 320px;
-        height: 400px;
+        width: 90%;
+        height: 90%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 60% 40% 70% 30% / 50% 60% 40% 70%;
     }
 
+    /* Imagen del pingüino: llena bien el blob */
+    /* Imagen del pingüino: llena bien el blob */
+    .pinguino-foto img,
+    #pinguino-adelia .pinguino-foto img,
+    #pinguino-galapagos .pinguino-foto img,
+    #pinguino-azul .pinguino-foto img,
+    #pinguino-rey .pinguino-foto img,
+    #pinguino-barbijo .pinguino-foto img {
+        max-width: 85% !important;
+        width: 85%;
+        max-height: 100%; 
+        object-fit: contain; 
+    }
+
+    /* Info debajo de la foto */
+    .pinguino-info {
+        flex: none;
+        max-width: 100%;
+        width: 100%;
+        margin-top: 30px !important; 
+        padding: 0 8px;
+        align-items: center;
+        text-align: center;
+    }
+
+    /* Ajuste individual por forma de cada pingüino */
+    #pinguino-azul .pinguino-foto {
+        height: min(240px, 65vw); 
+    }
+    #pinguino-azul .pinguino-foto img {
+        max-width: 100% !important;
+        width: 100%;
+    }
+
+    /* Info debajo de la foto */
+    .pinguino-info {
+        flex: none;
+        max-width: 100%;
+        width: 100%;
+        margin-top: 16px !important;
+        padding: 0 8px;
+        align-items: center;
+        text-align: center;
+    }
+
+    .pinguino-info p { text-align: center; }
+    .pinguino-info h1 { font-size: clamp(32px, 10vw, 42px); line-height: 1; letter-spacing: -1px; }
+    .pinguino-info h2 { font-size: 17px; margin-bottom: 12px; }
+    .pinguino-info p  { font-size: 15px; }
+
+    /* GALERIA */
     .galeria {
         flex-direction: column;
         height: auto;
     }
-    
+
     .galeria img {
         width: 100%;
-        height: 300px;
+        height: 180px;
+    }
+
+    /* DATOS RAPIDOS */
+    .datos-rapidos {
+        gap: 14px;
+        padding: 30px 16px;
     }
 
     .dato-ovalo {
-        width: 200px;
-        height: 280px;
+        width: 140px;
+        height: 185px;
+        padding: 4%;
+        box-shadow: 5px 5px 0px var(--negro);
+    }
+
+    .dato-ovalo h3 { font-size: 16px; letter-spacing: 1px; }
+    .dato-ovalo p  { font-size: 14px; }
+
+    /* CURIOSIDADES */
+    .curiosidades {
+        padding: 30px 16px 200px;
+        justify-content: center;
     }
 
     .burbuja {
-        padding: 30px;
+        width: 100%;
+        padding: 28px 20px;
         height: auto;
         min-height: auto;
-        border-radius: 30px;
-        box-shadow: 8px 8px 0px var(--azul-oscuro);
+        border-radius: 24px;
+        box-shadow: 6px 6px 0px var(--azul-oscuro);
     }
-    
+
     .burbuja::after { display: none; }
-    
-    .burbuja h3 { font-size: 35px; }
+    .burbuja h3 { font-size: 28px; margin-bottom: 20px; }
+    .burbuja ul { padding-left: 0; gap: 14px; }
+    .burbuja ul li { font-size: 15px; }
 
-    .curiosidades-pinguino img { width: 300px; }
-    .curiosidades { padding-bottom: 200px; }
-    }
-
-    .curiosidades { 
-        padding-bottom: 280px; 
-        padding-top: 50px;
-    }
+    /* FOOTER */
+    footer { padding: 20px 16px; }
+    footer p { font-size: 12px; letter-spacing: 1px; }
 
     .curiosidades-pinguino {
         right: 50%;
@@ -820,7 +956,5 @@ footer p{
         bottom: -10px;
     }
 
-    .curiosidades-pinguino img { 
-        width: 220px; 
-    }
+    .curiosidades-pinguino img { width: 180px; }
 }
