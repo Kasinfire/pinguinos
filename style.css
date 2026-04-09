@@ -826,12 +826,13 @@ footer p{
     }
 
     /* Foto: tamaño fijo cómodo, centrada */
-    .pinguino-foto {
+    pinguino-foto {
         width: min(280px, 75vw);
         height: min(320px, 85vw);
         min-height: unset !important;
         flex: none;
         margin: 0 auto;
+        background-color: transparent !important; /* FUERZA la transparencia del cuadrado */
     }
 
     /* Blob: llena el contenedor con forma orgánica */
@@ -847,6 +848,7 @@ footer p{
         left: 50%;
         transform: translate(-50%, -50%);
         border-radius: 60% 40% 70% 30% / 25% 60% 40% 70%;
+        
     }
 
     /* Imagen del pingüino: llena bien el blob */
